@@ -1,3 +1,3 @@
 # Simple-CRUD
 
-- Simple crud app with Spring MVC
+- A simple RESTful crud app with Spring MVC
