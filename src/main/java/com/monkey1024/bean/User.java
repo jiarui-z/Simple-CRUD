@@ -5,7 +5,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 import java.time.LocalDate;
 
 /**
- * 用户
+ * User entity
  */
 public class User {
 

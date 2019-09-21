@@ -8,15 +8,13 @@ import org.springframework.web.bind.annotation.*;
 import javax.xml.crypto.Data;
 import java.util.HashMap;
 
-/**
- * 基于restful风格的增删改查示例
- */
+
 @RestController
 public class UserRestController {
 
 
     /**
-     * 查询所有用户
+     * Find all users
      * @return
      * @throws Exception
      */
@@ -25,13 +23,13 @@ public class UserRestController {
 
         HashMap<String, User> allUser = DataUtil.findAll();
 
-        //返回json格式的数据
+        //Return json format
         return JSON.toJSONString(allUser);
     }
 
 
     /**
-     * 根据id查找
+     * Find by id
      * @param id
      * @return
      * @throws Exception
@@ -45,7 +43,7 @@ public class UserRestController {
 
 
     /**
-     * 新增
+     * Add new user
      * @param user
      * @return
      */
@@ -64,7 +62,7 @@ public class UserRestController {
 
 
     /**
-     * 更新
+     * Update
      * @param id
      * @param user
      * @return
@@ -82,7 +80,7 @@ public class UserRestController {
     }
 
     /**
-     * 删除
+     * Delete user
      * @param id
      * @return
      */

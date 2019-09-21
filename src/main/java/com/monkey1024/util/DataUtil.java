@@ -9,7 +9,7 @@ import java.util.Map;
 import java.util.Set;
 
 /**
- * 模拟生成数据的工具类
+ * Mock database
  */
 public class DataUtil {
 
@@ -18,9 +18,9 @@ public class DataUtil {
     //模拟初始化数据
 
     static {
-        User user1 = new User("jack", "18888888888", "北京", LocalDate.of(2012, 01, 01));
-        User user2 = new User("paul", "16666666666", "上海", LocalDate.of(2018, 04, 01));
-        User user3 = new User("andy", "19999999999", "深圳", LocalDate.of(2017, 11, 11));
+        User user1 = new User("jack", "18888888888", "Boston", LocalDate.of(2012, 01, 01));
+        User user2 = new User("paul", "16666666666", "Waterloo", LocalDate.of(2018, 04, 01));
+        User user3 = new User("andy", "19999999999", "Beijing", LocalDate.of(2017, 11, 11));
 
         dataMap.put("1", user1);
         dataMap.put("2", user2);
@@ -30,7 +30,7 @@ public class DataUtil {
 
 
     /**
-     * 查询全部数据
+     * Find all
      * @return
      */
     public static HashMap<String, User> findAll(){
@@ -38,7 +38,7 @@ public class DataUtil {
     }
 
     /**
-     * 根据id进行查询
+     * Find by id
      * @param id
      * @return
      */
@@ -48,12 +48,12 @@ public class DataUtil {
 
 
     /**
-     * 添加操作
+     * Add new user
      * @param user
      * @throws Exception
      */
     public static void create(User user) throws Exception{
-        //遍历map找到key的最大值
+        //Iterate through the keys to find the max val
         Set<Map.Entry<String, User>> entries = dataMap.entrySet();
         Iterator<Map.Entry<String, User>> iterator = entries.iterator();
 
@@ -73,7 +73,7 @@ public class DataUtil {
     }
 
     /**
-     * 修改用户
+     * Update user
      * @param id
      * @param user
      * @throws Exception
@@ -83,7 +83,7 @@ public class DataUtil {
     }
 
     /**
-     * 删除用户
+     * Delete user
      * @param id
      * @throws Exception
      */
